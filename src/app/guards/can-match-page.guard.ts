@@ -1,10 +1,10 @@
 import { inject } from '@angular/core';
 import { CanMatchFn, Route, Router, UrlSegment } from '@angular/router';
 
-import { getPageRequestParams } from '@dotcms/client';
-import { DotCMSPageAsset } from '@dotcms/angular';
+import { DotCMSPageAsset } from '../../../deps/angular/lib/models';
 
 import { DOTCMS_CLIENT_TOKEN } from '../client-token/dotcms-client';
+import { getPageRequestParams } from '../../../deps/client/src';
 
 export const canMatchPage: CanMatchFn = async (
   route: Route,

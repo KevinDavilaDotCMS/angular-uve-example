@@ -1,7 +1,8 @@
 import { ActivatedRouteSnapshot } from '@angular/router';
-import { DotCMSPageAsset, DotcmsNavigationItem } from '@dotcms/angular';
+
 import { inject } from '@angular/core';
 import { DOTCMS_CLIENT_TOKEN } from '../client-token/dotcms-client';
+import { DotCMSPageAsset, DotcmsNavigationItem } from '../../../deps/angular/lib/models';
 
 /**
  * This resolver is used to fetch the page and navigation data from dotCMS.

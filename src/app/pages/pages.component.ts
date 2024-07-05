@@ -15,9 +15,10 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 
 import { DYNAMIC_COMPONENTS } from '../utils';
 
-import { DotcmsLayoutComponent, PageContextService } from '@dotcms/angular';
-import { onFetchPageAssetFromUVE } from '@dotcms/client';
+
+import { onFetchPageAssetFromUVE } from '../../../deps/client/src';
 import { JsonPipe } from '@angular/common';
+import { DotcmsLayoutComponent, PageContextService } from '../../../deps/angular';
 
 @Component({
   selector: 'dotcms-pages',
@@ -42,6 +43,7 @@ export class DotCMSPagesComponent implements OnInit {
   pageContextService = inject(PageContextService);
 
   ngOnInit() {
+    console.log("II")
     // Get the context data from the route
     this.route.data
       .pipe(takeUntilDestroyed(this.destroyRef))

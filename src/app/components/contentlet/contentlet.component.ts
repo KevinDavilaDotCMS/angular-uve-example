@@ -2,9 +2,10 @@ import { Component, Input } from '@angular/core';
 
 import { GenericContentlet } from '../../utils';
 
-import { isInsideEditor } from '@dotcms/client';
+
 import { NgTemplateOutlet } from '@angular/common';
 import { Contentlet } from '../../../../deps/client/src/lib/client/content/shared/types';
+import { isInsideEditor } from '../../../../deps/client/src';
 
 @Component({
   selector: 'app-contentlet',

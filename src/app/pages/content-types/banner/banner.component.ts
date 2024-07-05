@@ -1,7 +1,8 @@
 import { NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { DotCMSContentlet } from '@dotcms/angular';
+import { DotCMSContentlet } from '../../../../../deps/angular';
+
 
 @Component({
   selector: 'app-banner',

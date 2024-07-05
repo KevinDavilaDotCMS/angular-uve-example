@@ -1,4 +1,4 @@
-import { DynamicComponentEntity } from '@dotcms/angular';
+import { DynamicComponentEntity } from '../../../deps/angular/lib/models';
 
 export const DYNAMIC_COMPONENTS: { [key: string]: DynamicComponentEntity } = {
   Activity: import('../pages/content-types/activity/activity.component').then(

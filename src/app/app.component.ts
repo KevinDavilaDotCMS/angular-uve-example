@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { DotcmsLayoutComponent } from '@dotcms/angular';
+import { DotcmsLayoutComponent } from '../../deps/angular';
+
 
 @Component({
   selector: 'app-root',

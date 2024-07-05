@@ -1,12 +1,13 @@
 import { ApplicationConfig } from '@angular/core';
 import { provideRouter } from '@angular/router';
 
-import { ClientConfig } from '@dotcms/client';
+
 
 import { routes } from './app.routes';
 import { environment } from '../environments/environment';
 import { provideDotcmsClient } from './client-token/dotcms-client';
 import { IMAGE_LOADER, ImageLoaderConfig } from '@angular/common';
+import { ClientConfig } from '../../deps/client/src';
 
 const DOTCMS_CLIENT_CONFIG: ClientConfig = {
   dotcmsUrl: environment.dotcmsUrl,

@@ -1,6 +1,6 @@
 import { EnvironmentProviders, InjectionToken, makeEnvironmentProviders } from '@angular/core';
 
-import { ClientConfig, DotCmsClient, dotcmsClient } from '@dotcms/client';
+import { ClientConfig, DotCmsClient, dotcmsClient } from '../../../deps/client/src';
 
 export const DOTCMS_CLIENT_TOKEN = new InjectionToken<DotCmsClient>('DOTCMS_CLIENT');
 

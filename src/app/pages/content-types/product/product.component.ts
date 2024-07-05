@@ -7,7 +7,8 @@ import {
 } from '@angular/core';
 
 import { RouterLink } from '@angular/router';
-import { DotCMSContentlet } from '@dotcms/angular';
+import { DotCMSContentlet } from '../../../../../deps/angular';
+
 
 @Component({
   selector: 'app-product',
