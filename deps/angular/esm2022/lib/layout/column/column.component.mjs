@@ -1,0 +1,33 @@
+import { ChangeDetectionStrategy, Component, HostBinding, Input } from '@angular/core';
+import { getPositionStyleClasses } from '../../utils';
+import { ContainerComponent } from '../container/container.component';
+import * as i0 from "@angular/core";
+export class ColumnComponent {
+    constructor() {
+        this.containerClasses = '';
+    }
+    ngOnInit() {
+        const { startClass, endClass } = getPositionStyleClasses(this.column.leftOffset, this.column.width + this.column.leftOffset);
+        this.containerClasses = `${startClass} ${endClass}`;
+    }
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "17.1.0", ngImport: i0, type: ColumnComponent, deps: [], target: i0.ɵɵFactoryTarget.Component }); }
+    static { this.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "17.0.0", version: "17.1.0", type: ColumnComponent, isStandalone: true, selector: "dotcms-column", inputs: { column: "column" }, host: { properties: { "class": "this.containerClasses" } }, ngImport: i0, template: `
+        @for (container of column.containers; track $index) {
+            <dotcms-container [container]="container" />
+        }
+    `, isInline: true, styles: [":host.col-start-1{grid-column-start:1}:host.col-start-2{grid-column-start:2}:host.col-start-3{grid-column-start:3}:host.col-start-4{grid-column-start:4}:host.col-start-5{grid-column-start:5}:host.col-start-6{grid-column-start:6}:host.col-start-7{grid-column-start:7}:host.col-start-8{grid-column-start:8}:host.col-start-9{grid-column-start:9}:host.col-start-10{grid-column-start:10}:host.col-start-11{grid-column-start:11}:host.col-start-12{grid-column-start:12}:host.col-end-1{grid-column-end:1}:host.col-end-2{grid-column-end:2}:host.col-end-3{grid-column-end:3}:host.col-end-4{grid-column-end:4}:host.col-end-5{grid-column-end:5}:host.col-end-6{grid-column-end:6}:host.col-end-7{grid-column-end:7}:host.col-end-8{grid-column-end:8}:host.col-end-9{grid-column-end:9}:host.col-end-10{grid-column-end:10}:host.col-end-11{grid-column-end:11}:host.col-end-12{grid-column-end:12}:host.col-end-13{grid-column-end:13}\n"], dependencies: [{ kind: "component", type: ContainerComponent, selector: "dotcms-container", inputs: ["container"] }], changeDetection: i0.ChangeDetectionStrategy.OnPush }); }
+}
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.1.0", ngImport: i0, type: ColumnComponent, decorators: [{
+            type: Component,
+            args: [{ selector: 'dotcms-column', standalone: true, imports: [ContainerComponent], template: `
+        @for (container of column.containers; track $index) {
+            <dotcms-container [container]="container" />
+        }
+    `, changeDetection: ChangeDetectionStrategy.OnPush, styles: [":host.col-start-1{grid-column-start:1}:host.col-start-2{grid-column-start:2}:host.col-start-3{grid-column-start:3}:host.col-start-4{grid-column-start:4}:host.col-start-5{grid-column-start:5}:host.col-start-6{grid-column-start:6}:host.col-start-7{grid-column-start:7}:host.col-start-8{grid-column-start:8}:host.col-start-9{grid-column-start:9}:host.col-start-10{grid-column-start:10}:host.col-start-11{grid-column-start:11}:host.col-start-12{grid-column-start:12}:host.col-end-1{grid-column-end:1}:host.col-end-2{grid-column-end:2}:host.col-end-3{grid-column-end:3}:host.col-end-4{grid-column-end:4}:host.col-end-5{grid-column-end:5}:host.col-end-6{grid-column-end:6}:host.col-end-7{grid-column-end:7}:host.col-end-8{grid-column-end:8}:host.col-end-9{grid-column-end:9}:host.col-end-10{grid-column-end:10}:host.col-end-11{grid-column-end:11}:host.col-end-12{grid-column-end:12}:host.col-end-13{grid-column-end:13}\n"] }]
+        }], propDecorators: { column: [{
+                type: Input
+            }], containerClasses: [{
+                type: HostBinding,
+                args: ['class']
+            }] } });
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29sdW1uLmNvbXBvbmVudC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uL2xpYnMvc2RrL2FuZ3VsYXIvc3JjL2xpYi9sYXlvdXQvY29sdW1uL2NvbHVtbi5jb21wb25lbnQudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsT0FBTyxFQUFFLHVCQUF1QixFQUFFLFNBQVMsRUFBRSxXQUFXLEVBQUUsS0FBSyxFQUFVLE1BQU0sZUFBZSxDQUFDO0FBRy9GLE9BQU8sRUFBRSx1QkFBdUIsRUFBRSxNQUFNLGFBQWEsQ0FBQztBQUN0RCxPQUFPLEVBQUUsa0JBQWtCLEVBQUUsTUFBTSxrQ0FBa0MsQ0FBQzs7QUFjdEUsTUFBTSxPQUFPLGVBQWU7SUFaNUI7UUFjMEIscUJBQWdCLEdBQUcsRUFBRSxDQUFDO0tBUy9DO0lBUEcsUUFBUTtRQUNKLE1BQU0sRUFBRSxVQUFVLEVBQUUsUUFBUSxFQUFFLEdBQUcsdUJBQXVCLENBQ3BELElBQUksQ0FBQyxNQUFNLENBQUMsVUFBVSxFQUN0QixJQUFJLENBQUMsTUFBTSxDQUFDLEtBQUssR0FBRyxJQUFJLENBQUMsTUFBTSxDQUFDLFVBQVUsQ0FDN0MsQ0FBQztRQUNGLElBQUksQ0FBQyxnQkFBZ0IsR0FBRyxHQUFHLFVBQVUsSUFBSSxRQUFRLEVBQUUsQ0FBQztJQUN4RCxDQUFDOzhHQVZRLGVBQWU7a0dBQWYsZUFBZSxtS0FSZDs7OztLQUlULDQ5QkFMUyxrQkFBa0I7OzJGQVNuQixlQUFlO2tCQVozQixTQUFTOytCQUNJLGVBQWUsY0FDYixJQUFJLFdBQ1AsQ0FBQyxrQkFBa0IsQ0FBQyxZQUNuQjs7OztLQUlULG1CQUVnQix1QkFBdUIsQ0FBQyxNQUFNOzhCQUd0QyxNQUFNO3NCQUFkLEtBQUs7Z0JBQ2dCLGdCQUFnQjtzQkFBckMsV0FBVzt1QkFBQyxPQUFPIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQ2hhbmdlRGV0ZWN0aW9uU3RyYXRlZ3ksIENvbXBvbmVudCwgSG9zdEJpbmRpbmcsIElucHV0LCBPbkluaXQgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcblxuaW1wb3J0IHsgRG90UGFnZUFzc2V0TGF5b3V0Q29sdW1uIH0gZnJvbSAnLi4vLi4vbW9kZWxzJztcbmltcG9ydCB7IGdldFBvc2l0aW9uU3R5bGVDbGFzc2VzIH0gZnJvbSAnLi4vLi4vdXRpbHMnO1xuaW1wb3J0IHsgQ29udGFpbmVyQ29tcG9uZW50IH0gZnJvbSAnLi4vY29udGFpbmVyL2NvbnRhaW5lci5jb21wb25lbnQnO1xuXG5AQ29tcG9uZW50KHtcbiAgICBzZWxlY3RvcjogJ2RvdGNtcy1jb2x1bW4nLFxuICAgIHN0YW5kYWxvbmU6IHRydWUsXG4gICAgaW1wb3J0czogW0NvbnRhaW5lckNvbXBvbmVudF0sXG4gICAgdGVtcGxhdGU6IGBcbiAgICAgICAgQGZvciAoY29udGFpbmVyIG9mIGNvbHVtbi5jb250YWluZXJzOyB0cmFjayAkaW5kZXgpIHtcbiAgICAgICAgICAgIDxkb3RjbXMtY29udGFpbmVyIFtjb250YWluZXJdPVwiY29udGFpbmVyXCIgLz5cbiAgICAgICAgfVxuICAgIGAsXG4gICAgc3R5bGVVcmw6ICcuL2NvbHVtbi5jb21wb25lbnQuY3NzJyxcbiAgICBjaGFuZ2VEZXRlY3Rpb246IENoYW5nZURldGVjdGlvblN0cmF0ZWd5Lk9uUHVzaFxufSlcbmV4cG9ydCBjbGFzcyBDb2x1bW5Db21wb25lbnQgaW1wbGVtZW50cyBPbkluaXQge1xuICAgIEBJbnB1dCgpIGNvbHVtbiE6IERvdFBhZ2VBc3NldExheW91dENvbHVtbjtcbiAgICBASG9zdEJpbmRpbmcoJ2NsYXNzJykgY29udGFpbmVyQ2xhc3NlcyA9ICcnO1xuXG4gICAgbmdPbkluaXQoKSB7XG4gICAgICAgIGNvbnN0IHsgc3RhcnRDbGFzcywgZW5kQ2xhc3MgfSA9IGdldFBvc2l0aW9uU3R5bGVDbGFzc2VzKFxuICAgICAgICAgICAgdGhpcy5jb2x1bW4ubGVmdE9mZnNldCxcbiAgICAgICAgICAgIHRoaXMuY29sdW1uLndpZHRoICsgdGhpcy5jb2x1bW4ubGVmdE9mZnNldFxuICAgICAgICApO1xuICAgICAgICB0aGlzLmNvbnRhaW5lckNsYXNzZXMgPSBgJHtzdGFydENsYXNzfSAke2VuZENsYXNzfWA7XG4gICAgfVxufVxuIl19
